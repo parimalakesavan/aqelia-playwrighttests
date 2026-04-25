@@ -1,0 +1,26 @@
+{
+  "name": "aqilea-website-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prerun": "rm -rf videos playwright-report allure-results test-results",
+    "regression": "npm run prerun & npx playwright test",
+    "HomePage": "npx playwright test --grep @Home",
+    "ServicePage": "npx playwright test --grep @Service",
+    "LifeatAqileaPage": "npx playwright test --grep @LifeatAqilea"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^20.11.20",
+    "allure-commandline": "^2.27.0",
+    "allure-playwright": "^2.15.0"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.9.0",
+    "playwright": "^1.44.0"
+  }
+}
